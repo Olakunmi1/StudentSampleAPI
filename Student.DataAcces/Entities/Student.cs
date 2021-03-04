@@ -19,10 +19,10 @@ namespace StudentSampleAPI.Student.DataAcces
 
         public int Age { get; set; }
 
-        [ForeignKey("AssignmentId")]
-        public IEnumerable<Assignment> Assignment { get; set; }
+        //[ForeignKey("AssignmentId")]
+        //public IEnumerable<Assignment> Assignment { get; set; }
 
-        public int AssignmentId { get; set; }
+        //public int AssignmentId { get; set; }
 
         public DateTime Created_at { get; set; }
     }

@@ -1,13 +1,14 @@
-﻿using System;
+﻿using StudentSampleAPI.ReadDTO;
+using System;
 using System.Collections.Generic;
 
 namespace StudentSampleAPI.Student.DataAcces.Interface
 {
     public interface IStudent
     {
-        IEnumerable<Assignment> GetListOfAllStudentsWhoSubmittedOnASpecificDate();
+        List<StudentDTO> GetListOfAllStudentsWhoSubmittedOnASpecificDate();
 
-        IEnumerable<Assignment> GetListOfAllStudentsOrderedByDateOfSubmission();
+        List<StudentDTO> GetListOfAllStudentsOrderedByDateOfSubmission();
 
         void AddCustomer(Student student);
       

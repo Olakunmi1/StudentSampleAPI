@@ -28,19 +28,11 @@ namespace StudentSampleAPI.Controllers
             {
                 var students = _student.GetListOfAllStudentsWhoSubmittedOnASpecificDate();
 
-                var listOfstudents_ReadDTO = students
-                        .Select(x => new StudentDTO
-                        {
-                            Name = x.Student.Name,
-                            Age = x.Student.Age,
-                            Created_at = x.Student.Created_at
-                        }).ToList();
-
                 return Ok(new ApiGenericResponse<StudentDTO>
                 {
                     Success = true,
                     Message = "List Of Students Who Submitted On A Specific date",
-                    Results = listOfstudents_ReadDTO
+                    Results = students
 
                 });
             }
@@ -64,19 +56,11 @@ namespace StudentSampleAPI.Controllers
             {
                 var students = _student.GetListOfAllStudentsOrderedByDateOfSubmission();
 
-                var listOfstudents_ReadDTO = students
-                        .Select(x => new StudentDTO
-                        {
-                            Name = x.Student.Name,
-                            Age = x.Student.Age,
-                            Created_at = x.Student.Created_at
-                        }).ToList();
-
                 return Ok(new ApiGenericResponse<StudentDTO>
                 {
                     Success = true,
                     Message = "List Of Students Ordered By Date Of Submission",
-                    Results = listOfstudents_ReadDTO
+                    Results = students
                 });
             }
 
